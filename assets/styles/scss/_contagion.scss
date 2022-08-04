@@ -1,0 +1,147 @@
+@use "variables" as v;
+
+.contagion {
+  padding-top: 86px;
+
+  .container {
+    position: relative;
+
+    .contagion-main {
+      text-align: center;
+
+      .title {
+        margin-bottom: 20px;
+      }
+
+      .desc {
+        max-width: 679px;
+        margin: 0 auto;
+        margin-bottom: 65px;
+      }
+
+      .contagion-card {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 30px;
+
+        .card-item {
+          width: 358px;
+          height: 441px;
+          background: v.$white-color;
+          box-shadow: 0px 35px 87px rgba(0, 0, 0, 0.11);
+          border-radius: 10px;
+          padding-top: 60px;
+
+          .img-container {
+            width: 183.23px;
+            height: 225.19px;
+            margin: 0 auto;
+          }
+
+          .card-content {
+            .card-title {
+              font-family: "Gelion", sans-serif;
+              font-weight: 500;
+              font-size: 1.5rem;
+              line-height: 147%;
+              text-transform: capitalize;
+              color: v.$text-title-color;
+              margin-bottom: 10px;
+            }
+
+            .card-desc {
+              font-family: "Gelion", sans-serif;
+              font-size: 0.9rem;
+              line-height: 185%;
+              text-transform: capitalize;
+              font-weight: 500;
+              color: v.$text-desc-color;
+              max-width: 307px;
+              margin: 0 auto;
+            }
+          }
+        }
+
+        .card--active {
+          border-bottom: 5px solid v.$primary-color;
+        }
+      }
+    }
+
+    > .img-container {
+      position: absolute;
+      width: 146px;
+      left: -61px;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 953px) {
+  .contagion .container .contagion-main .contagion-card .card-item {
+    height: 405px;
+  }
+}
+
+@media (max-width: 799px) {
+  .contagion .container .contagion-main .desc {
+    margin-bottom: 30px;
+  }
+
+  .contagion .container .contagion-main .contagion-card {
+    gap: 0 10px;
+  }
+
+  .contagion
+    .container
+    .contagion-main
+    .contagion-card
+    .card-item
+    .img-container {
+    width: 141.23px;
+    height: 161.19px;
+  }
+
+  .contagion .container .contagion-main .contagion-card .card-item {
+    height: 319px;
+  }
+
+  .contagion .container .contagion-main .contagion-card .card-item {
+    padding-top: 29px;
+  }
+}
+
+@media (max-width: 550px) {
+  .contagion
+    .container
+    .contagion-main
+    .contagion-card
+    .card-item
+    .card-content
+    .card-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .contagion .container .contagion-main .contagion-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 0;
+  }
+
+  .contagion .container .contagion-main .contagion-card .card-item {
+    width: 250px;
+  }
+
+  .contagion
+    .container
+    .contagion-main
+    .contagion-card
+    .card-item
+    .card-content
+    .card-desc {
+    max-width: 210px;
+  }
+}

@@ -1,0 +1,62 @@
+@use "variables" as v;
+
+.symptomps {
+  padding-top: 150px;
+
+  .container {
+    position: relative;
+
+    .symptomps-main {
+      .title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .desc {
+        max-width: 816px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .img-container {
+        width: 83%;
+        margin: 0 auto;
+      }
+    }
+
+    > .img-container {
+      width: 140px;
+      position: absolute;
+
+      &:nth-child(2) {
+        left: -50px;
+        bottom: 170px;
+      }
+
+      &:nth-child(3) {
+        right: -60px;
+        bottom: 170px;
+      }
+    }
+  }
+}
+
+@media (max-width: 953px) {
+  .symptomps .container .symptomps-main .desc {
+    max-width: 611px;
+  }
+
+  .symptomps .container > .img-container {
+    width: 90px;
+  }
+}
+
+@media (max-width: 470px) {
+  .symptomps .container > .img-container:nth-child(3) {
+    bottom: 80px;
+  }
+
+  .symptomps .container > .img-container:nth-child(2) {
+    bottom: 90px;
+  }
+}

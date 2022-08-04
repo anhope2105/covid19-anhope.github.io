@@ -1,0 +1,118 @@
+@use "variables"as v;
+
+.subscribe {
+  padding-top: 150px;
+  position   : relative;
+
+  .container {
+    .subscribe-main {
+      max-width: 790px;
+      margin   : 0 auto;
+
+      .subscribe-title {
+        font-family  : "Gelion", sans-serif;
+        font-weight  : 500;
+        font-size    : 3.5rem;
+        line-height  : 4.813rem;
+        color        : #0c6c44;
+        text-align   : center;
+        margin       : 0 auto;
+        margin-bottom: 50px;
+        max-width    : 601px;
+      }
+
+      .contact {
+        width           : 750px;
+        height          : 114px;
+        background-color: v.$white-color;
+        box-shadow      : 0px 8px 80px rgba(0, 0, 0, 0.06);
+        border-radius   : 57px;
+        display         : flex;
+        justify-content : space-between;
+        align-items     : center;
+        padding         : 0 20px;
+        margin          : 0 auto;
+        position        : relative;
+
+        div {
+          position        : absolute;
+          width           : 0;
+          height          : 2px;
+          background-color: #4b4f51;
+          bottom          : 35px;
+          transition      : width 0.3s linear;
+        }
+
+        input {
+          width      : 70%;
+          font-family: "Gelion", sans-serif;
+          font-weight: 500;
+          font-size  : 1.5rem;
+          line-height: 189%;
+          color      : #4b4f51;
+          border     : none;
+          position   : relative;
+
+          &::placeholder {
+            font-style: italic;
+            opacity   : 0.5;
+          }
+
+          &:focus~div {
+            width: 66%;
+          }
+        }
+
+        .btn {
+          width : 184px;
+          height: 76px;
+        }
+      }
+    }
+  }
+
+  .img-container {
+    position: absolute;
+    right   : 0;
+    top     : 150px;
+    width   : 24%;
+  }
+}
+
+@media (max-width: 834px) {
+  .subscribe .container .subscribe-main .contact {
+    width : 90%;
+    height: 88px;
+  }
+
+  .subscribe .container .subscribe-main .contact .btn {
+    width : 146px;
+    height: 59px;
+  }
+
+  .subscribe .container .subscribe-main .contact div {
+    bottom: 25px;
+  }
+}
+
+@media (max-width: 673px) {
+  .subscribe .container .subscribe-main .contact input {
+    &:focus~div {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 546px) {
+  .subscribe .container .subscribe-main .contact input {
+    &:focus~div {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .subscribe .container .subscribe-main .subscribe-title {
+    font-size: 2.8rem;
+  }
+}

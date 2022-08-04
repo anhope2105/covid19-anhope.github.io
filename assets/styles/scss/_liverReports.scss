@@ -1,0 +1,237 @@
+@use "variables" as v;
+
+.liver-reports {
+  .container {
+    .liver-reports-main {
+      display: flex;
+      justify-content: space-between;
+      gap: 0 36px;
+
+      .map {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex: 2;
+
+        .map-features {
+          width: 56.06px;
+          height: 143px;
+          background-color: v.$white-color;
+          box-shadow: 0px 5px 50px rgba(104, 33, 28, 0.1);
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 0;
+
+          .arrow {
+            display: flex;
+            flex-direction: column;
+          }
+
+          img {
+            width: 20px;
+          }
+
+          .line {
+            width: 7px;
+            height: 0.8px;
+            border-radius: 10px;
+            background-color: #68708975;
+          }
+        }
+
+        .search {
+          width: 63px;
+          height: 57px;
+          background: v.$white-color;
+          box-shadow: 0px 7px 76px rgba(146, 53, 46, 0.18);
+          border-radius: 4.16667px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .img-container {
+          position: absolute;
+          width: 146%;
+          z-index: -1;
+          left: -59px;
+          top: 26px;
+        }
+      }
+
+      .detail {
+        width: 394px;
+        padding: 37px;
+        background: linear-gradient(360deg, #fffbfb -79.45%, #fdfdfd 105.35%);
+        box-shadow: 0px 7px 95px rgba(0, 0, 0, 0.07);
+        border-radius: 0px;
+
+        .detail-header {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 38px;
+          align-items: center;
+
+          .title {
+            font-size: 1.7rem;
+          }
+
+          .detail-header__features {
+            width: 81px;
+            height: 40.95px;
+            background: #fff;
+            box-shadow: 0px 5px 50px rgb(87 1 0 / 10%);
+            border-radius: 6.16667px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+
+            .line {
+              height: 100%;
+              width: 2px;
+              background-color: #68708975;
+            }
+          }
+        }
+
+        .detail-body {
+          .country-list {
+            .country {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 26px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              .flag-name {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0 30px;
+
+                .name {
+                  font-family: "Gelion", sans-serif;
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 1.3rem;
+                  line-height: 2.313rem;
+
+                  color: #13615f;
+                }
+              }
+
+              .quantity {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0 15px;
+
+                .number {
+                  font-family: "Gelion", sans-serif;
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 1.3rem;
+                  line-height: 1.813rem;
+                  color: #035755;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 953px) {
+  .liver-reports .container .liver-reports-main .detail {
+    width: 335px;
+    padding: 30px;
+  }
+
+  .liver-reports .container .liver-reports-main .detail .detail-header {
+    margin-bottom: 29px;
+  }
+
+  .liver-reports
+    .container
+    .liver-reports-main
+    .detail
+    .detail-body
+    .country-list
+    .country {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 899px) {
+  .liver-reports .container .liver-reports-main {
+    flex-direction: column;
+    gap: 366px 0;
+  }
+
+  .liver-reports .container .liver-reports-main .detail {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 661px) {
+  .liver-reports .container .liver-reports-main {
+    flex-direction: column;
+    gap: 235px 0;
+  }
+}
+
+@media (max-width: 558px) {
+  .liver-reports .container .liver-reports-main .map .map-features img {
+    width: 12px;
+  }
+
+  .liver-reports .container .liver-reports-main .map .map-features {
+    width: 42.06px;
+    height: 112px;
+  }
+
+  .liver-reports .container .liver-reports-main .map .search {
+    width: 50px;
+    height: 45px;
+
+    img {
+      width: 22px;
+    }
+  }
+}
+
+@media (max-width: 382px) {
+  .liver-reports .container .liver-reports-main .detail {
+    width: 300px;
+    padding: 30px;
+  }
+
+  .liver-reports
+    .container
+    .liver-reports-main
+    .detail
+    .detail-body
+    .country-list
+    .country
+    .flag-name {
+    gap: 0 11px;
+  }
+
+  .liver-reports
+    .container
+    .liver-reports-main
+    .detail
+    .detail-body
+    .country-list
+    .country
+    .quantity {
+    gap: 0 8px;
+  }
+}

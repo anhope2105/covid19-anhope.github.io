@@ -1,0 +1,91 @@
+@use "variables" as v;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.img-container {
+  img {
+    width: 100%;
+  }
+}
+
+ul {
+  display: flex;
+}
+
+.btn {
+  background: v.$primary-color;
+  box-shadow: 0px 8px 87px rgba(0, 0, 0, 0.1);
+  border-radius: 65px;
+  color: v.$white-color;
+  font-family: "Gelion", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.813rem;
+  text-transform: capitalize;
+  border: none;
+}
+
+.title {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: bold;
+  color: v.$text-title-color;
+  font-size: 2rem;
+  line-height: 3rem;
+
+  span {
+    font-size: 1.2rem;
+    line-height: 120%;
+    color: v.$primary-color;
+  }
+}
+
+.desc {
+  font-family: "Gelion", sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 189%;
+  text-transform: capitalize;
+  color: v.$text-desc-color;
+}
+
+.logo {
+  display: flex;
+  width: 190.82px;
+  height: 63px;
+  align-items: center;
+
+  .img-container {
+    width: 63px;
+    margin-right: 14px;
+  }
+
+  p {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: bold;
+    font-size: 1.188rem;
+    line-height: 1.563rem;
+    text-transform: uppercase;
+
+    color: v.$text-title-color;
+  }
+}
+
+@media (max-width: 953px) {
+  html {
+    font-size: 12px;
+  }
+}
